@@ -2,7 +2,9 @@ package com.example.ejercicio567.controller;
 
 import com.example.ejercicio567.entities.Laptop;
 import com.example.ejercicio567.repository.LaptopRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,12 +18,16 @@ public class LaptopController {
         this.laptopRepository = laptopRepository;
     }
 
+    @Value("${app.message}")
+    String message;
+
     // CRUD sobre la entidad Laptop
 
     // Buscar todos los Laptops
 
     @GetMapping("/api/laptops")
     public List<Laptop> findAll() {
+        System.out.println(message);
         return laptopRepository.findAll();
     }
 
