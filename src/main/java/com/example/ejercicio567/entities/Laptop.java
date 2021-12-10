@@ -12,7 +12,7 @@ public class Laptop {
     private Long id;
     private String fabricante;
     private String model;
-    private Integer RAM;
+    private Integer ram;
     private Integer discoDuro;
     private LocalDate fabYear;
     private Boolean online;
@@ -20,11 +20,11 @@ public class Laptop {
     public Laptop() {
     }
 
-    public Laptop(Long id, String fabricante, String model, Integer RAM, Integer discoDuro, LocalDate fabYear, Boolean online) {
+    public Laptop(Long id, String fabricante, String model, Integer ram, Integer discoDuro, LocalDate fabYear, Boolean online) {
         this.id = id;
         this.fabricante = fabricante;
         this.model = model;
-        this.RAM = RAM;
+        this.ram = ram;
         this.discoDuro = discoDuro;
         this.fabYear = fabYear;
         this.online = online;
@@ -54,12 +54,12 @@ public class Laptop {
         this.model = model;
     }
 
-    public Integer getRAM() {
-        return RAM;
+    public Integer getram() {
+        return ram;
     }
 
-    public void setRAM(Integer RAM) {
-        this.RAM = RAM;
+    public void setram(Integer ram) {
+        this.ram = ram;
     }
 
     public Integer getDiscoDuro() {
